@@ -302,11 +302,11 @@ document.getElementById('back-btn').addEventListener('click', function() {
 
     // If the owner is logged in, redirect to the owner dashboard
     if (ownerLoggedIn) {
-        window.location.href = "l2.html"; // Replace with your actual home page for the owner
+        window.location.href = "index.html"; // Replace with your actual home page for the owner
     } else if (adminLoggedIn) {
-        window.location.href = " l2.html"; // Replace with your actual home page for the admin
+        window.location.href = " index.html"; // Replace with your actual home page for the admin
     } else {
         // If no one is logged in, redirect to the login page
-        window.location.href = " l2.html"; // Replace with your actual login page URL
+        window.location.href = " index.html"; // Replace with your actual login page URL
     }
 });
