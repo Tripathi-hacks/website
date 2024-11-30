@@ -33,18 +33,18 @@ const ownerPassword = "owner1234";
 let students = [];
 
 // // Back Button Logic globsl declaration for the all page this might be work in theb logic gate 
-backBtn.addEventListener('click', function () {
-    const adminLoggedIn = sessionStorage.getItem("adminLoggedIn");
-    const ownerLoggedIn = sessionStorage.getItem("ownerLoggedIn");
+// backBtn.addEventListener('click', function () {
+//     const adminLoggedIn = sessionStorage.getItem("adminLoggedIn");
+//     const ownerLoggedIn = sessionStorage.getItem("ownerLoggedIn");
 
-    if (ownerLoggedIn) {
-        window.location.href = "index.html"; // Replace with owner home page URL
-    } else if (adminLoggedIn) {
-        window.location.href = "index.html"; // Replace with admin home page URL
-    } else {
-        window.location.href = "index.html"; // Replace with login page URL
-    }
-});
+//     if (ownerLoggedIn) {
+//         window.location.href = "index.html"; // Replace with owner home page URL
+//     } else if (adminLoggedIn) {
+//         window.location.href = "index.html"; // Replace with admin home page URL
+//     } else {
+//         window.location.href = "index.html"; // Replace with login page URL
+//     }
+// });
 
 // Splash Screen
 setTimeout(() => {
@@ -306,3 +306,25 @@ setInterval(updateFeeStatus, 3600000); // Run every 1 hour
     });
 });
 // this can be set as the clear the input data 
+document.getElementById('back-btn').addEventListener('click', function() {
+    // Check the browsing history length
+    if (window.history.length > 1) {
+        // Go back one step in the history
+        window.history.back();
+    } else {
+        // If there is no history, handle redirection based on login status
+        const adminLoggedIn = sessionStorage.getItem("adminLoggedIn");
+        const ownerLoggedIn = sessionStorage.getItem("ownerLoggedIn");
+
+        if (ownerLoggedIn) {
+            // Redirect to the owner dashboard
+            window.location.href = "index.html"; // Replace with your actual home page for the owner
+        } else if (adminLoggedIn) {
+            // Redirect to the admin dashboard
+            window.location.href = "index.html"; // Replace with your actual home page for the admin
+        } else {
+            // Redirect to the login page if no one is logged in
+            window.location.href = "index.html"; // Replace with your login page path
+        }
+    }
+});
