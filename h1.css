@@ -1,0 +1,747 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    /* font-family: ; */
+    background-color: #5f87a0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* overflow: hidden;  */
+    /*Prevent horizontal scrolling */
+}
+
+/* Splash Screen Styling */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#library-logo {
+    width: 150px;
+    height: auto;
+    margin: 20px auto;
+}
+
+
+/* Header styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* Ensure it starts from the very left */
+    width: 100%;
+    /* Full width of the viewport */
+    text-align: center;
+    background-color: #4CAF50;
+    padding: 15px 0;
+    color: white;
+    z-index: 100;
+}
+
+/* Title styling */
+#app-title {
+    font-size: 2em;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    text-align: center;
+    /* Ensures the text stays centered */
+}
+
+/* Add responsive adjustments */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 5px;
+        /* Slightly adjust padding for smaller devices */
+    }
+
+    #app-title {
+        font-size: 1.5em;
+        /* Slightly smaller font size for smaller screens */
+    }
+}
+
+
+/* Blinking effect for "TechPotes Technology" */
+.blink {
+    color: red;
+    /* Initial color */
+    animation: blink 1s infinite;
+    /* Blinking animation */
+}
+
+/* Keyframes for the blinking effect */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+        /* Fully visible */
+        color: red;
+        /* Highlight color */
+    }
+
+    50% {
+        opacity: 0;
+        /* Hidden */
+        color: #ffff
+            /* Faded color */
+    }
+}
+
+
+
+
+/* App Section Styles (Centered Content) */
+/* App Section Styles (Centered Content) */
+.app-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 70px;
+    /* Spacing below header */
+}
+
+/* Specific Login Form Styling */
+#login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Full screen height */
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    /* Default width for larger screens */
+    max-width: 500px;
+    padding: 30px;
+    background-image: linear-gradient(to bottom, #424242ad, #212121);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    color: wheat;
+    margin: 3rem 0;
+    font-size: 2.5rem;
+    /* Larger font size for emphasis */
+    text-align: center;
+}
+
+#loginForm label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-weight: 700;
+}
+
+#loginForm input {
+    margin: 0.8rem 0;
+    padding: 1rem 0.5rem;
+    width: 100%;
+    /* Full width */
+    font-size: 1.1rem;
+    color: wheat;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid wheat;
+    transition: all 300ms ease-in-out;
+}
+
+#loginForm input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button Styling */
+.app-btn {
+    height: 3rem;
+    width: 100%;
+    margin-top: 3rem;
+    background-color: white;
+    border-radius: 0.8rem;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.app-btn:hover {
+    background-color: #45a049;
+}
+
+/* Media Query for Tablets and Small Laptops */
+@media (max-width: 1024px) {
+    #loginForm {
+        width: 90%;
+        /* Slightly smaller width */
+        max-width: 450px;
+        padding: 25px;
+    }
+
+    .title {
+        font-size: 2.2rem;
+        /* Slightly smaller font size */
+    }
+
+    #loginForm input {
+        padding: 0.9rem 0.5rem;
+        font-size: 1rem;
+    }
+
+    .app-btn {
+        height: 2.8rem;
+        font-size: 1.1rem;
+    }
+}
+
+/* Media Query for Smartphones */
+@media (max-width: 480px) {
+    #loginForm {
+        width: 95%;
+        /* Almost full width */
+        max-width: 400px;
+        /* Limit width */
+        padding: 25px;
+    }
+
+    .title {
+        font-size: 2rem;
+        /* Keep it bold but smaller */
+    }
+
+    #loginForm input {
+        padding: 0.3rem 0.4rem;
+        font-size: 0.95rem;
+        border-radius: 10px;
+    }
+
+    .app-btn {
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+}
+
+
+
+/* body {
+    background-color: #232323; 
+  } */
+
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #333;
+    z-index: 100;
+}
+
+#logout-btn {
+    width: 90%;
+    background-color: #ff5733;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+/* Media Query for smaller devices */
+@media screen and (max-width: 768px) {
+    #library-logo {
+        width: 120px;
+    }
+
+    #loginForm {
+        max-width: 95%;
+        background-color: #0093E9;
+        /* remove the background image from the student login form due to the lagging the data and the image in  */
+        /*  first section of the page  */
+    }
+}
+
+/* Seat Selection Grid */
+#seat-reservation-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.library {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* Adjust for more spacious layout */
+    gap: 20px;
+    width: 90%;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 10px;
+    /* background-color: #f9f9f9; Light background to make seats stand out */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); Soft shadow for depth */
+    /* overflow-y: auto; Allow grid to scroll when too tall */
+    max-height: calc(100vh - 160px);
+    /* Limit grid height based on viewport */
+    width: 100%;
+    /* Set the desired width */
+    height: 100%;
+    /* Set the desired height */
+    overflow-y: scroll;
+}
+
+.seat {
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s ease;
+    /* Add smooth animations */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Seat shadow for depth */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.seat:hover {
+    transform: scale(1.05);
+    /* Slight zoom effect on hover */
+}
+
+.seat.reserved {
+    background-color: #ff5733;
+    /* Reserved seat color */
+    cursor: not-allowed;
+    opacity: 0.7;
+    /* Make reserved seats appear less vibrant */
+}
+
+.seat.occupied {
+    background-color: #FFAA33;
+    /* Occupied seat color */
+    cursor: not-allowed;
+    opacity: 0.8;
+    /* Dimmed to show it's taken */
+}
+
+.seat.available:hover {
+    background-color: #45a049;
+    /* Lighter green on hover for available seats */
+}
+
+/* Notification styling */
+#notification {
+    margin-top: 40px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+
+#admin-dots {
+    position: fixed;
+    margin-bottom: auto;
+    margin-top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2000;
+    padding: 10px;
+}
+
+/* Modal Visibility                                           */
+#admin-modal {
+    display: none;
+    position: fixed;
+    left: 45%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    /* background-color: gray;   remove the background color and also remove the border bavkground */
+    padding: 20px;
+    /* border: 1px solid ;  */
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); no need to box shadaw  */
+    z-index: 2000;
+    border-radius: 10px;
+}
+
+
+/* Admin login modal styling */
+
+#admin-login-form {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px;
+    width: 320px;
+    text-align: center;
+}
+
+#admin-login-form input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#admin-login-form button {
+    padding: 12px;
+    width: 100%;
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#admin-login-form button:hover {
+    background-color: #4CAF50;
+}
+
+#close-modal {
+    background-color: #ccc;
+    margin-top: 10px;
+}
+
+/* the css adjuastment in the code for the  better response  */
+#admin-modal {
+    display: none;
+    /* Admin modal hidden by default */
+}
+
+#student-login-form {
+    display: block;
+    /* Student login form visible by default --? this is all about all code  */
+}
+
+
+/* Admin dashboard styling */
+#owner-dashboard {
+    display: none;
+    width: 80%;
+    max-height: 75vh;
+    overflow: auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+#search-bar {
+    margin-bottom: 15px; 
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Fee button styling */
+.fee-due {
+    background-color: red;
+    color: white;
+}
+
+.fee-paid {
+    background-color: green;
+    color: white;
+}
+
+/* Scroll area for long lists */
+#student-list-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Three-dot admin login trigger */
+/* #admin-login-trigger {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;  // this is the repositioning of the image 
+    cursor: pointer;  //again the repositioning of the css of this code in the section of the last code of the image section of the lat point of gthe data base 
+} */
+#owner-dashboard,
+#admin-seat-management {
+    display: none;
+    width: 100%;
+    /* height: 100vh; Full viewport height set as the requirment of the last code requirment  */
+}
+
+
+
+
+
+
+
+
+
+/*the end of the replacement code /*
+
+
+
+ 
+
+
+/* Seat Selection Grid for larger screens */
+@media screen and (min-width: 1024px) {
+    .library {
+        grid-template-columns: repeat(6, 1fr);
+        /* Increase to 6 columns for more space */
+        gap: 30px;
+        /* Larger gaps between seats */
+        max-width: 900px;
+        /* Increase grid width for a more spacious layout */
+        padding: 20px;
+        /* Add more padding for a roomier feel */
+    }
+
+    .seat {
+        padding: 25px;
+        /* Increase seat size for better visibility */
+        font-size: 1.4em;
+        /* Slightly larger font size for seat labels */
+        border-radius: 15px;
+        /* Rounder corners for seats */
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+        /* Stronger shadow for depth */
+    }
+
+    .app-section {
+        margin-top: 140px;
+        /* Adjust the margin to give more space below header */
+    }
+}
+
+/* Back Button Styles */
+#back-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    font-weight: bold;
+    flex-shrink: 0;
+    /* Prevent shrinking of the back button */
+}
+
+#back-btn .arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid white;
+    /* Green color for the arrow */
+    border-bottom: 2px solid white;
+    /* Matches arrow color */
+    transform: rotate(45deg);
+    background: none;
+    /* Remove any background color */
+}
+
+/* Back Button Styles (Positioned in the Top-Left Corner) */
+#back-btn {
+    position: absolute;
+    /* Absolute positioning to place it in the corner */
+    top: 70px;
+    left: 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Optional: Adjust Arrow Styles */
+#back-btn .arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid white;
+    /* White arrow color */
+    border-bottom: 2px solid white;
+    /* Matches arrow color */
+    transform: rotate(45deg);
+    /* Rotate to form an arrow */
+    background: none;
+}
+
+
+/* CSS for highlighting only the border in yellow */
+.seat.highlight {
+    border: 2px solid yellow;
+    /* Adds a yellow border to the seat */
+    box-sizing: border-box;
+    /* Ensures the border doesn't alter the size of the seat */
+    /* background-color: transparent; Keeps the background color unchanged */
+    transition: border 0.3s ease-in-out;
+    /* Optional: adds a smooth transition effect */
+}
+ 
+#seat-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller devices */
+    justify-content: space-between;
+    /* Space between input and button */
+    align-items: center;
+    /* Align vertically */
+    width: 100%;
+    /* Full width */
+    gap: 10px;
+    /* Add spacing between elements */
+    box-sizing: border-box;
+    /* Include padding and borders in calculations */
+    padding: 10px;
+    /* Add padding to avoid clipping */
+    position: absolute;
+    /* Positioning for centering */
+    top: 50%;
+    /* Vertical centering */
+    left: 50%;
+    /* Horizontal centering */
+    transform: translate(-50%, -50%);
+    /* Adjust for perfect center */
+    max-width: 480px;
+    /* Limit maximum width to prevent overflow */
+}
+
+/* Styling for seat input */
+#seat-input {
+    flex-grow: 1;
+    /* Allow input to take available space */
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: fit-content;
+    /* Ensure it spans the container width */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+}
+
+/* Centering input field in the screen */
+
+
+/* Styling for search button */
+#search-seat {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+
+#back-btn {
+    position: fixed;
+    /* Stays at the same place regardless of scrolling */
+    top: 10px;
+    left: 10px;
+    /* Space from the edges */
+    z-index: 1000;
+    /* Ensures it is above other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    /* Blue background for better visibility */
+    border-radius: 50%;
+    /* Circular shape */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for better visibility */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+#back-btn .arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-left: 2px solid white;
+    /* Arrow color */
+    border-bottom: 2px solid white;
+    /* Matches arrow color */
+    transform: rotate(45deg);
+    /* Forms an arrow */
+    background: none;
+}
+
+#back-btn:hover {
+    background-color: #0056b3; /* Darker blue for hover */
+    color: #f1f1f1; /* Slightly lighter text color */
+    transform: scale(1.1); /* Slightly enlarges the button */
+}
+
+@media screen and (max-width: 768px) {
+    #back-btn {
+        width: 30px;
+        height: 30px;
+        /* Smaller button for smaller screens */
+    }
+
+    #back-btn .arrow {
+        width: 8px;
+        height: 8px;
+        /* Smaller arrow */
+        border-left: 2px solid white;
+        border-bottom: 2px solid white;
+    }
+}
+
+ 
